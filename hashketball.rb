@@ -123,7 +123,6 @@ def player_numbers(team)
   numbers =[]
   game_hash.values.each do |keys|
     if keys[:team_name] == team
-      puts keys[:team_name]
        numbers = keys[:players].values.collect {|keys| keys[:number]}
      end
    end
