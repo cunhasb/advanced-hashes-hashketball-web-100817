@@ -129,15 +129,15 @@ def player_numbers(team)
    numbers.sort
 end
 
+
 def player_stats(player)
   stats={}
   game_hash.values.each do |keys|
-    if keys[:players].include?(player)
-      stats = keys[:players][player]
-    end
+    keys[:players].include?(players) ? stats = keys[:players][player] : nil
   end
-   stats
+  stats
 end
+
 
 def big_shoe_rebounds
   shoe = 0
