@@ -132,8 +132,8 @@ end
 
 def player_stats(player)
   stats={}
-  game_hash.values.each do |keys|
-    keys[:players].include?(players) ? stats = keys[:players][player] : nil
+  game_hash.values.each do
+    |keys| keys[:players].include?(players) ? stats = keys[:players][player] : nil}
   end
   stats
 end
